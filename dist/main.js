@@ -1,0 +1,1 @@
+console.log("Hello"),obj=new class{constructor(o){this.msg=o}saludar(){console.log(this.msg)}}("Helloooo"),obj.saludar();
