@@ -12,7 +12,7 @@ const Home = async () => {
             <h2>${character.name}</h2>
         </a>
         </article>
-        `).join()}
+        `).join() }
     </div>`;
     return view;
 }
