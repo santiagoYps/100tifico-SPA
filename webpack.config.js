@@ -5,6 +5,9 @@ para trabajar con rutas de archivos y drectorios
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+// Se encarga de copiar los estilos a la carpeta dist
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+
 // Exportando modulo u objeto de configuración
 module.exports = {
     // Punto de entrada del proyecto.
@@ -50,5 +53,10 @@ module.exports = {
                 filename: './index.html'
             }
         ),
+        new CopyWebpackPlugin({
+            patterns: [
+                { from: './src/styles/styles.css', to: '' },
+            ],
+        }),
     ]
 }
